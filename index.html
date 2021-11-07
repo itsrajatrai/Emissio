@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
     <head>
-	
-	    
       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
       <title>Emissio: Coming Soon</title>
       <link rel="icon" href="Logos/favicon.ico">
       <link rel="stylesheet" href="Public/style.css">
-	    
-	    
-      
+    </head>
     <body>
-	    
         <div class="nav">
             <div class="nav-l">
                 <img src="Logos/logo without tagline.png">
             </div>
+            
             <div id="open" class="nav-r">
                 <div></div>
                 <div></div>
@@ -38,16 +34,12 @@
 info@emissio.live
             </div>
             <!--<div class="sub-form">
-                <form action="https://live.us20.list-manage.com/subscribe/post?u=269efdf6f529c1f575680fa24&amp;id=cf729d0709" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                  <label for="mce-EMAIL"></label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_269efdf6f529c1f575680fa24_cf729d0709" tabindex="-1" value=""></div>
-        <div class="clear foot">
-           <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
+                <form action="/GetData" method="POST">\
+                    <input type="email" placeholder="Enter your email :)" name="email">
+                    <input type="submit" value="&#x1F514;">
                 </form>
-            </div> 
-        </div>-->
+            </div> -->
+        </div>
 	<div class="right-foo-down">
 				
                         <a href="https://twitter.com/EMISSIO_HQ" target="_blank"><img src="sm-logo/twitter.ico"></a>
@@ -58,8 +50,6 @@ info@emissio.live
         <div class="footer">
             Copyright &#169; 2021 Emissio
         </div>
-	
-	    
         <div id="ab-menu" class="about">
             <div><span style="float: left;">About Us</span><span id="close" style="float:right; cursor:pointer;">&#10060;</span></div>
             <br>
@@ -68,8 +58,6 @@ info@emissio.live
 
                 Emissio, India's own audio entertainment platform aims to bring back the long lost glory of the audio to you. That's all for now, will let you know more about us later. Till then, be ready, we are coming soon! </p>
         </div>
-	    
-	    
         <div class="area" >
             <ul class="circles">
                     <li></li>
@@ -85,6 +73,21 @@ info@emissio.live
             </ul>
     </div >
 
+    <div class="Subscribe-popup">
+                <button class="open-button" onclick="openForm()">Join the Waiting List</button>
+               
+                <div class="form-popup" id="myForm">
+                    <form action="https://live.us20.list-manage.com/subscribe/post?u=269efdf6f529c1f575680fa24&amp;id=cf729d0709" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"  class="form-container">
+                      <h2>Join the Waiting List</h2>
+                      <p>Get the latest news and updates from Emissio.</p>
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                      <p class="brandingLogo"><a href="http://eepurl.com/hMyrgn" title="Mailchimp - email marketing made easy and fun"><img style="margin: auto; display: block;" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                    </form>
+            </div>
+
 
     <script>
         const targetDiv = document.getElementById("ab-menu");
@@ -97,6 +100,16 @@ info@emissio.live
         btn2.onclick = function () {
             targetDiv.style.display = "none";
         };
+
+        
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+        }
+
     </script>
 
     
