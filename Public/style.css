@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
   }
+img {
+  pointer-events: none;
+  user-select: none;
+}
+.right-foo-down img{
+	pointer-events: none;
+  user-select: none;
+}
 body{
     margin:0px;
     top:0px;
