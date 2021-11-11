@@ -444,3 +444,12 @@ input[type=submit]{
    }
    
    } 
+
+   .close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
