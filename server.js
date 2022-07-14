@@ -127,7 +127,10 @@ app.get('/store', (req, res) => {
 }
 );
 
-const Server = app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-}
+var http = require('http')
+ var port = process.env.PORT || 3000;
+ http.createServer(function(req, res) {
+   res.writeHead(200, { 'Content-Type': 'text/plain' });
+   res.end('Hello World\n');
+ }).listen(port);
 );
