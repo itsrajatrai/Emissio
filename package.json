@@ -8,13 +8,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-<<<<<<< Updated upstream
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
-    "scripts": {
-      "test": "mocha"
-    }
->>>>>>> Stashed changes
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
