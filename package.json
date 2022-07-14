@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha"
+    "scripts": {"test": "mocha"}
   },
   "repository": {
     "type": "git",
