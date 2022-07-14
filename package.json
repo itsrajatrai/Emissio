@@ -8,7 +8,13 @@
   },
   "scripts": {
     "start": "nodemon server.js",
+<<<<<<< Updated upstream
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "scripts": {
+      "test": "mocha"
+    }
+>>>>>>> Stashed changes
   },
   "repository": {
     "type": "git",
@@ -31,6 +37,7 @@
     "mongoose": "^6.4.3",
     "moongoose": "^0.0.5",
     "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^2.0.19",
     "smtp-server": "^3.11.0"
   },
   "devDependencies": {
