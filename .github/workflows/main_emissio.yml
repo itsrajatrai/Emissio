@@ -52,4 +52,4 @@ jobs:
         with:
           app-name: 'Emissio'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_519E630C456B4FB0A0A41D818BDA72D5 }}
-          package: ./dist/Emissio
+          package: ./Emissio
