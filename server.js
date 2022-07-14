@@ -128,7 +128,7 @@ app.get('/store', (req, res) => {
 );
 
 var http = require('http')
- var port = process.env.PORT || 8080;
+ var port = process.env.PORT || 1337;
     http.createServer(app).listen(port, function () {
         console.log('Server listening on port ' + port);
     }
