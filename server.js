@@ -127,6 +127,19 @@ app.get('/store', (req, res) => {
 }
 );
 
+// dowload wallpaper
+app.get('/download', (req, res) => {
+    // to check if the browser is mobile
+    if (req.headers['user-agent'].includes('Mobile')) {
+        res.download('./public/Images/Metaverse Mobile Wallpaper.jpg');
+    } else {
+        res.download('./public/Images/Metaverse Wallpaper.png');
+
+    }
+}
+);
+
+
 var http = require('http')
  var port = process.env.PORT || 1337;
     http.createServer(app).listen(port, function () {
