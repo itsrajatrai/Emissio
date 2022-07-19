@@ -122,6 +122,13 @@ app.use((err, req, res, next) => {
     res.render('error');
 }
 );
+//render error.ejs http 404 error
+app.use((req, res, next) => {
+    res.render('error');
+}
+);
+
+
 app.get('/store', (req, res) => {
     res.render('cs');
 }
