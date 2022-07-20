@@ -100,8 +100,8 @@ span {
 }
 
 .login-cont2{
-  background-color: #282828;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ /* background-color: #282828;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
   z-index: 40;
     position: absolute;
     top:25%;
@@ -121,7 +121,7 @@ span {
 .login-cont2 img{
   display:block;
   margin: 0 auto;
-  width:75px;
+  width:250px;
   padding:5px;
 }
 
@@ -533,6 +533,33 @@ line-height: 40px;
   border-radius: 15px;
 }
 
+
+/* Error Pages */
+.error-con{
+  margin-top: 12%;
+  display: flexbox;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.errorimg{
+ align-self: center;
+  background-color: aqua;
+}
+.errorimg img{
+  display: flexbox;
+  margin: 0 auto;
+  width:500px;
+}
+.error-text{
+  font-size: 20px;
+  color: #fff;
+  font-family: BlinkMacSystemFont,"-webkit-system-font","Malgun Gothic","Segoe UI","Helvetica Neue",Helvetica,sans-serif;
+  line-height: 40px;
+  margin-top: 10px;
+  align-self: center;
+}
 /* Responsive  for all mobile devices*/
 @media only screen and (max-width: 600px) {
   
@@ -667,6 +694,8 @@ display: none;
 }
 
 }
+
+
 /* Responsive for all tablet devices */
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
   .login-cont{

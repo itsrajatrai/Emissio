@@ -88,7 +88,7 @@ app.post('/Add', (req, res) => {
                         transporter.sendMail(mailOptions, (err, info) => {
                             if (err) {
                                 console.log(err);
-                                res.status(500).json({ message: 'Error sending email' });
+                                res.status(500).render('500'), { error: err };
 
                             } else {
                                 console.log(info);
@@ -117,18 +117,6 @@ app.get('/', (req, res) => {
 }
 );
 
-// render success.ejs on any error
-app.use((err, req, res, next) => {
-    res.render('error');
-}
-);
-//render error.ejs http 404 error
-app.use((req, res, next) => {
-    res.render('error');
-}
-);
-
-
 app.get('/store', (req, res) => {
     res.render('cs');
 }
@@ -146,6 +134,16 @@ app.get('/download', (req, res) => {
 }
 );
 
+app.use(function(req, res) {
+    res.status(400);
+   res.render('404', {title: '404: File Not Found'});
+   });
+   
+   // Handle 500
+   app.use(function(error, req, res, next) {
+     res.status(500);
+   res.render('500', {title:'500: Internal Server Error', error: error});
+   });
 
 var http = require('http')
  var port = process.env.PORT || 1337;
