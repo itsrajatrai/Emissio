@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const { body, validationResult } = require('express-validator');
 
 
 const app = express();
@@ -20,10 +21,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 //ejs
 app.set('view engine', 'ejs');
 
-app.post('/Add', (req, res) => {
+app.post('/Add', 
+//email must be valid
+body('email').isEmail(),
+(req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.send('<script>alert("Invalid Email address");window.location.href="/";</script>');
+    }
    const name = req.body.name;
     const email = req.body.email;
- 
+
+
     // if name and email are empty, return error
     if (!name || !email) {
         res.send('<script>alert("Name and Email cannot be empty!");window.location.href="/";</script>');
