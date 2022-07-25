@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const { body, validationResult } = require('express-validator');
 
+const morgan = require('morgan');
+
 
 const app = express();
 const router = express.Router();
@@ -13,6 +15,10 @@ router.use(bodyParser.json())
 const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 const { MongoClient } = require("mongodb");
+
+
+    app.use(morgan('dev'));
+
 
 //path
 const path = require('path');
