@@ -32,6 +32,7 @@
     "mongodb": "^4.7.0",
     "mongoose": "^6.4.3",
     "moongoose": "^0.0.5",
+    "morgan": "^1.10.0",
     "nodemailer-smtp-transport": "^2.7.4",
     "nodemon": "^2.0.19",
     "smtp-server": "^3.11.0"
