@@ -150,7 +150,7 @@ app.get('/download', (req, res) => {
 );
 
 app.use(function(req, res) {
-    res.status(400);
+    res.status(404);
    res.render('404', {title: '404: File Not Found'});
    });
    
@@ -162,9 +162,21 @@ app.use(function(req, res) {
 
 var http = require('http')
  var port = process.env.PORT || 1337;
-    http.createServer(app).listen(port, function () {
-        console.log('Server listening on port ' + port);
-    }
-    );
+ if (process.env.NODE_ENV === 'production') {
+    http.createServer(app).listen(port, function() {
+     console.log('===============================');
+     console.log('   Production Environment    ');
+     console.log('         Port: ' + port         );
+     console.log('===============================');
+    });
+  }
+     else {
+         app.listen(port, function() {
+            console.log('===============================');
+            console.log('   Developement Environment    ');
+            console.log('         Port: ' + port         );
+            console.log('===============================');
+         });
+        };
     
 
