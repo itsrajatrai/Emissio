@@ -66,7 +66,8 @@ body('email').isEmail(),
                 collection.insertOne({ 
                     name: name,
                      email: email, 
-                        date: new Date()
+                        date: new Date(),
+                        send: true  
                 }, (err, result) => {
                     if (err) {
                         console.log(err);
@@ -124,6 +125,7 @@ body('email').isEmail(),
     }
 }
 );
+
 
                             
 
