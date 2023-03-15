@@ -1,2 +1,2 @@
 # Emissio
-An Audio Entertainment Platform
+An Audio Entertainment Platform under development
