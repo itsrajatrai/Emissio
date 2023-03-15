@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Logs
 logs
 *.log
@@ -110,6 +108,8 @@ dist
 .node_modules
 
 .env
->>>>>>> 11e0e048bd2e344e76e1e606aad0a45805dc26bd
 .env.dev
 .env.prod
+
+# Local Netlify folder
+.netlify
